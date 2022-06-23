@@ -98,6 +98,22 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: compatmode
+    attributes:
+      label: "Compatibility modes"
+      description: "if you had to apply compatibility modes to make it work, please specify below"
+      multiple: true
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+    validations:
+      required: false
+
   - type: textarea
     id: comments
     attributes:
