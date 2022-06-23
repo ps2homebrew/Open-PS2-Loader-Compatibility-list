@@ -57,7 +57,7 @@ body:
       required: true
 
   - type: dropdown
-    id: mode
+    id: device
     attributes:
       label: "In which device have you performed the test?"
       multiple: false
@@ -87,7 +87,7 @@ body:
   - type: checkboxes
     id: features 
     attributes:
-      label: Checks
+      label: features
       description: "Wich features did you test?"
       options:
         - label: VMC
