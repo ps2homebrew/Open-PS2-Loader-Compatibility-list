@@ -1,10 +1,8 @@
-# FreeMcBoot installers
+# Open PS2 Loader Compatibility List
 
-Welcome to the webpage of FreeMcBoot installers maintained by @israpps
 
-![logo](./fmcb.png)
+![logo](./logo.png)
 
-The installers and FreeMcBoot 1.9 series were created by @sp193, al credits go to him.
+Idea by El_Isra
 
-1.8 series and older were built by @jimmikaelkael and neme, the original creators.
-
+Special thanks to anyone that contributed to OPL
