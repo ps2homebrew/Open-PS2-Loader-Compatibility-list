@@ -1,4 +1,4 @@
-# Kingdom Hearts 2 Final mix
+# Kingdom Hearts 2 Final mix - `SLPM_666.75`
 
 | Region code | Media | Image format | Loader | Device | required modes | VMC | PADEMU | Compatible | Notes |
 | ----------- | ----- | ------------ | ------ | -------------- | --- | ------ | ---------- | ----- |
