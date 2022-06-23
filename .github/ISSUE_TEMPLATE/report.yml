@@ -23,6 +23,21 @@ body:
       value: |
         ##### please complete the following information:
 
+  - type: dropdown
+    id: itworks
+    attributes:
+      label: "game state"
+      description: "how stable is the gameplay?"
+      multiple: false
+      options:
+        - "Working"
+        - "working with issues"
+        - "barely working"
+        - "imposible to play"
+        - "doesn't even boot"
+    validations:
+      required: true
+
   - type: input
     id: console
     attributes:
