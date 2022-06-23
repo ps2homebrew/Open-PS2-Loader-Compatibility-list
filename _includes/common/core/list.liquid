@@ -6,5 +6,7 @@
 {%- endfor -%}
 
 {%- if include.all -%}
+str
     {%- for workdir in workdir_dirs %}{% include common/core/_list.liquid %}{% endfor -%}
+end
 {%- endif -%}
