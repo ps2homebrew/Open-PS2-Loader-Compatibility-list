@@ -1,4 +1,9 @@
 // core
+
+table {
+    overflow-x: scroll;
+}
+
 @import "lib/material-design-lite/variables";
 @import "lib/material-design-lite/mixins";
 @import "lib/@primer/css/support";
