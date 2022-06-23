@@ -56,6 +56,23 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: gametitle
+    attributes:
+      label: "Game title"
+      placeholder: "eg: Predator Concrete jungle"
+    validations:
+      required: true
+
+  - type: input
+    id: regioncode
+    attributes:
+      label: "Game Region code (ID)"
+      description: "OPL will show you this on it´s UI"
+      placeholder: "eg: SLES_530.91"
+    validations:
+      required: true
+
   - type: dropdown
     id: device
     attributes:
