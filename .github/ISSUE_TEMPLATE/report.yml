@@ -1,0 +1,102 @@
+name: Game compatibility report
+description: a game compat report that will be merged to the list if it gets approved 
+title: "[REPORT]: "
+labels: [report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### __Disclaimer:__
+        Issue reports for the OPL app that was not downloaded from the [__Official OPL GitHub repository__](https://github.com/ps2homebrew/open-ps2-loader/releases) or [official Mega archive](https://mega.nz/folder/Ndwi1bAK#oLWNhH_g-h0p4BoT4c556A) are not accepted.
+        Before posting the issue confirm that you meet the below requirements.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checks
+      description: "Check before posting"
+      options:
+        - label: I have checked if a report of the same game, in the same test environment is already included  
+
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Describe the issue
+      description: A clear and concise description of what the issue is.
+      placeholder: My issue is...
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ##### please complete the following information:
+
+  - type: input
+    id: console
+    attributes:
+      label: Console model
+      description: you can see it on the console sticker or inside OSDSYS (press triangle on main menú)
+      placeholder: SCPH-?????
+    validations:
+      required: true
+
+  - type: input
+    id: oplver
+    attributes:
+      label: "OPL version / revision"
+      description: "you can see it on the About option from the settings menu (press start in game list)"
+      placeholder: "eg: OPL stable 1.0.0 | OPL beta 1.1.0 1732"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: "In which device have you performed the test?"
+      multiple: false
+      options:
+        - USB
+        - SMB
+        - HDD
+        - iLink
+        - MX4SIO
+    validations:
+      required: true
+
+  - type: dropdown
+    id: image
+    attributes:
+      label: "what was the game format?"
+      multiple: false
+      options:
+        - ISO
+        - ZSO
+        - UL
+        - HDL ISO
+        - HDL ZSO
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: features 
+    attributes:
+      label: Checks
+      description: "Wich features did you test?"
+      options:
+        - label: VMC
+        - label: PADEMU
+        - label: PADMACRO
+        - label: IGR
+        - label: GSM
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: comments about this report 
+      description: Information about game performance 
+      placeholder: "ie: audio is corrupted/game crashes when using ..."
+    validations:
+      required: true
