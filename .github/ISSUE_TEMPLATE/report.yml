@@ -96,7 +96,7 @@ body:
         - label: IGR
         - label: GSM
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: compatmode
@@ -121,4 +121,4 @@ body:
       description: Information about game performance 
       placeholder: "ie: audio is corrupted/game crashes when using ..."
     validations:
-      required: true
+      required: false
