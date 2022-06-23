@@ -76,7 +76,7 @@ body:
   - type: dropdown
     id: device
     attributes:
-      label: "In which device have you performed the test?"
+      label: "device used on test"
       multiple: false
       options:
         - USB
