@@ -21,12 +21,12 @@ sed  -i '/\/n$/d;' $a
 done
 
 declare TESTER=$(jq ".user.login" REPORT.JSON)
-declare ELF=$(head -n 1 game.md)
+declare ELF=$(head -n 1 Game.md)
 declare PLAYABLE=$(head -n 1 gameplay.md)
 declare TITLE=$(head -n 1 title.md)
 declare DEVICE=$(head -n 1 device.md)
 declare OPL=$(head -n 1 OPL.md)
-declare CONSOLE_MODEL=$(head -n 1 console.md)
+declare CONSOLE_MODEL=$(head -n 1 Console.md)
 declare FORMAT=$(head -n 1 format.md)
 declare MEDIA=$(head -n 1 media.md)
 
