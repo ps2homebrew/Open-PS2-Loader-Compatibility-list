@@ -8,8 +8,6 @@ jobs:
   add-comment:
     if: github.event.label.name == 'approved'
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
 
       - name: checkout v3
