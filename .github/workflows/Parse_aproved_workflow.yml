@@ -12,8 +12,10 @@ jobs:
       issues: write
     steps:
 
-      - name: install required crap
+      - name: checkout v3
         uses: actions/checkout@v3
+        
+      - name: install required crap
         run: |
            sudo apt-get install -y --assume-yes dos2unix jq wget
 
