@@ -133,7 +133,7 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: input
     id: comments
     attributes:
       label: comments about this report 
