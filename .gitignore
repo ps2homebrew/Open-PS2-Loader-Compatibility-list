@@ -32,3 +32,4 @@ action.changelog.md
 
 script/
 !script/ProcessData.sh
+!script/**.TEMPLATE
