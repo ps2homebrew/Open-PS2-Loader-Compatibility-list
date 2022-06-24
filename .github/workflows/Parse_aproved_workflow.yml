@@ -22,6 +22,7 @@ jobs:
       - name: ProcessData script execution
         run: |
            cd script
+           chmod +x ./ProcessData.sh
            ./ProcessData.sh ${{ github.event.issue.number }}
 
       - name: Create Pull Request
