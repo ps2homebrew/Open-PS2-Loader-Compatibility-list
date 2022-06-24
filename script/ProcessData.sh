@@ -74,6 +74,7 @@ then
 else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
 	echo "# $TITLE">$FILETARGET
+	echo "">>$FILETARGET
 	cat heading.TEMPLATE >> $FILETARGET
 fi
 
