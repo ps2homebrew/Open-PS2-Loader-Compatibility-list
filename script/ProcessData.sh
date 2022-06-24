@@ -1,6 +1,10 @@
 #!/bin/bash
+rm -rf *.md
+rm -rf *.JSON
+rm -rf *.MDUMMY
 echo Downloading Report number $1
 wget -q --show-progress "https://api.github.com/repos/israpps/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
+dos2unix REPORT.JSON
 echo Processing data...
 jq -r '.body' REPORT.JSON > BODY.MDUMMY
 awk '/^### */{ close(out); out=$2".md" } out!=""{print > out}' BODY.MDUMMY
@@ -70,7 +74,7 @@ then
 else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
 	echo "# $TITLE">$FILETARGET
-	cat heading.TEMPLATE > $FILETARGET
+	cat heading.TEMPLATE >> $FILETARGET
 fi
 
 echo "| $ELF | $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>$FILETARGET
