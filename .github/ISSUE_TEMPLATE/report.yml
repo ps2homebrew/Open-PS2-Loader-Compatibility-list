@@ -59,7 +59,8 @@ body:
   - type: input
     id: gametitle
     attributes:
-      label: "Game title"
+      label: "title"
+      description: "The game title"
       placeholder: "eg: Predator Concrete jungle"
     validations:
       required: true
@@ -90,7 +91,8 @@ body:
   - type: dropdown
     id: image
     attributes:
-      label: "what was the game format?"
+      label: "Format"
+      description: "Game image format"
       multiple: false
       options:
         - ISO
