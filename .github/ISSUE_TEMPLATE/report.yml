@@ -26,7 +26,7 @@ body:
   - type: dropdown
     id: gamestate
     attributes:
-      label: "game state"
+      label: "gameplay"
       description: "how stable is the gameplay?"
       multiple: false
       options:
