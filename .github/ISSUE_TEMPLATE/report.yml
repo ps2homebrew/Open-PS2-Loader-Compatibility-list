@@ -24,7 +24,7 @@ body:
         ##### please complete the following information:
 
   - type: dropdown
-    id: itworks
+    id: gamestate
     attributes:
       label: "game state"
       description: "how stable is the gameplay?"
@@ -89,7 +89,7 @@ body:
       required: true
 
   - type: dropdown
-    id: image
+    id: format
     attributes:
       label: "format"
       description: "Game image format"
@@ -103,6 +103,19 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: media
+    attributes:
+      label: "media"
+      description: "Game image media (DVD9=Dual layer DVD)"
+      multiple: false
+      options:
+        - DVD5
+        - DVD9
+        - CD
+    validations:
+      required: true
+      
   - type: checkboxes
     id: features 
     attributes:
