@@ -30,5 +30,6 @@ jobs:
           body: "merge report #${{ github.event.issue.number }}"
           title: "merge report #${{ github.event.issue.number }}"
           delete-branch: true
+          branch-suffix: random
           add-paths: |
             List/*/*
