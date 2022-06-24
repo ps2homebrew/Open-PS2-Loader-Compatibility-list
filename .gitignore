@@ -30,6 +30,6 @@ _sass/@primer/css/**/*.md
 # action
 action.changelog.md
 
-script/
+script/**
 !script/ProcessData.sh
 !script/**.TEMPLATE
