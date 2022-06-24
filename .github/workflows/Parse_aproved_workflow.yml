@@ -1,0 +1,33 @@
+name: process aproved workflow
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  add-comment:
+    if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+
+      - name: install required crap
+      - uses: actions/checkout@v3
+        run: |
+            sudo apt-get install -y --assume-yes dos2unix jq wget
+
+      - name: ProcessData script execution
+        run: |
+            cd script
+            ./ProcessData.sh ${{ github.event.issue.number }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "merge report #${{ github.event.issue.number }}"
+          body: "merge report #${{ github.event.issue.number }}"
+          title: "merge report #${{ github.event.issue.number }}"
+          delete-branch: true
+          add-paths: |
+            List/**.mds
