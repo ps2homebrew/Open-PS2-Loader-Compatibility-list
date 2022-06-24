@@ -5,7 +5,7 @@ on:
       - labeled
 
 jobs:
-  add-comment:
+  create-PR:
     if: github.event.label.name == 'approved'
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +31,4 @@ jobs:
           title: "merge report #${{ github.event.issue.number }}"
           delete-branch: true
           add-paths: |
-            List/**.mds
+            List/*/*
