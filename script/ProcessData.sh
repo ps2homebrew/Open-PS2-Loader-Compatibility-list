@@ -9,6 +9,10 @@ echo Processing data...
 jq -r '.body' REPORT.JSON > BODY.MDUMMY
 awk '/^### */{ close(out); out=$2".md" } out!=""{print > out}' BODY.MDUMMY
 
+echo MDs
+ls *md
+echo END MDs
+
 for a in *.md
 do
 sed -i '/^###/d' $a
