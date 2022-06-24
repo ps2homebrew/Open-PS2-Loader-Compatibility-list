@@ -91,7 +91,7 @@ body:
   - type: dropdown
     id: image
     attributes:
-      label: "Format"
+      label: "format"
       description: "Game image format"
       multiple: false
       options:
