@@ -24,6 +24,7 @@ jobs:
            ./ProcessData.sh ${{ github.event.issue.number }}
 
       - name: Create Pull Request
+        id: prmaker
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "merge report #${{ github.event.issue.number }}"
@@ -33,3 +34,11 @@ jobs:
           branch-suffix: random
           add-paths: |
             List/*/*
+            
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: |
+                "Your issue was approved and transfered into a [__Pull Request__](${{ steps.prmaker.outputs.pull-request-url }})"
+                "now it's awaiting a maintainer aproval to be merged into list"
