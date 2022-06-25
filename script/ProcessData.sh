@@ -50,6 +50,8 @@ do
 	if grep -q "$A" features.md
 	then
 	declare $A=YES
+	else
+	declare $A=NO
 	fi
 done
 echo "--------------------{ SUMMARY }--------------------"
