@@ -17,6 +17,7 @@ body:
       description: "Check before posting"
       options:
         - label: I have checked if a report of the same game, in the same test environment, is already included  
+        - label: I have tested all features from the feature list 
 
   - type: markdown
     attributes:
