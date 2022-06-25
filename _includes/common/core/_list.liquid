@@ -13,6 +13,7 @@
 
 {%- for item in workdir_files %}
 {% include common/rest/tabs.liquid size=size_p1 %}- [{{ item.title | default: item.name }}]({{ item.url | relative_url }})
+
 {%- endfor -%}
 
 </p>
