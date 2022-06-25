@@ -76,8 +76,10 @@ FSTCHAR=${FSTCHAR^^}
 else
 FSTCHAR="#"
 fi
+echo game goes into folder $FSTCHAR
 
 FILETARGET="../List/$FSTCHAR/$ELF.md"
+echo file path $FILETARGET
 if [ -f $FILETARGET ]
 then
 	echo "$FILETARGET Exists, skipping creation"
@@ -85,6 +87,7 @@ else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
 	echo "# $TITLE">$FILETARGET
 	echo "">>$FILETARGET
+	echo appending table header liquid macro
 	cat heading.TEMPLATE >> $FILETARGET
 fi
 
