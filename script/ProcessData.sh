@@ -70,8 +70,14 @@ echo ---
 echo COMPAT_MODES 	- $COMPAT_MODES -
 echo COMMENTS 		- $COMMENTS -
 
+if [[ "$TITLE" =~ ^[a-z]|[A-Z].* ]]; then
 FSTCHAR=${TITLE:0:1}
-FILETARGET="../List/${FSTCHAR^^}/$ELF.md"
+FSTCHAR=${FSTCHAR^^}
+else
+FSTCHAR="#"
+fi
+
+FILETARGET="../List/$FSTCHAR/$ELF.md"
 if [ -f $FILETARGET ]
 then
 	echo "$FILETARGET Exists, skipping creation"
