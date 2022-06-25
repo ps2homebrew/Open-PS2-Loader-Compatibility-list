@@ -86,10 +86,11 @@ then
 else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
 	echo "# $TITLE">$FILETARGET
+	echo "## __$ELF__">>$FILETARGET
 	echo "">>$FILETARGET
 	echo appending table header liquid macro
 	cat heading.TEMPLATE >> $FILETARGET
 fi
 
-echo "| $ELF | $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>$FILETARGET
+echo "| $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>$FILETARGET
 
