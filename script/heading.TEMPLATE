@@ -1,2 +1,1 @@
-| Region code | Media | Image format | Loader | Device | required modes | VMC | IGR | PADEMU | Compatible | Tester | <div style="width:190px">Console</div> | <div style="width:490px">Notes</div> |
-| ----------- | ----- | ------------ | ------ | ------ | -------------- | --- | --- | ------ | ---------- | ------ | -------------------------------------- | ------------------------------------ |
+{% include table_header %}
