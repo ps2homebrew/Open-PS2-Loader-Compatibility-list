@@ -74,7 +74,7 @@ if [[ "$TITLE" =~ ^[a-z]|[A-Z].* ]]; then
 FSTCHAR=${TITLE:0:1}
 FSTCHAR=${FSTCHAR^^}
 else
-FSTCHAR="#"
+FSTCHAR=NUMBERED
 fi
 echo game goes into folder $FSTCHAR
 
