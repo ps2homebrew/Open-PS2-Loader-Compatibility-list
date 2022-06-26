@@ -9,19 +9,18 @@ jobs:
     if: github.event.label.name == 'approved'
     runs-on: ubuntu-latest
     steps:
-
       - name: checkout v3
         uses: actions/checkout@v3
-        
+
       - name: install required crap
         run: |
-           sudo apt-get install -y --assume-yes dos2unix jq wget
+          sudo apt-get install -y --assume-yes dos2unix jq wget
 
       - name: ProcessData script execution
         run: |
-           cd script
-           chmod +x ./ProcessData.sh
-           ./ProcessData.sh ${{ github.event.issue.number }}
+          cd script
+          chmod +x ./ProcessData.sh
+          ./ProcessData.sh ${{ github.event.issue.number }}
 
       - name: Create Pull Request
         id: prmaker
@@ -34,11 +33,11 @@ jobs:
           branch-suffix: random
           add-paths: |
             List/*/*
-            
+
       - name: Close Issue
         uses: peter-evans/close-issue@v2
         with:
           issue-number: ${{ github.event.issue.number }}
           comment: |
-                Your issue was approved and transfered into a [__Pull Request__](${{ steps.prmaker.outputs.pull-request-url }})
-                now it's awaiting a maintainer aproval to be merged into list
+            Your issue was approved and transfered into a [__Pull Request__](${{ steps.prmaker.outputs.pull-request-url }})
+            now it's awaiting a maintainer aproval to be merged into list

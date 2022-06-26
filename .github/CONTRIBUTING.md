@@ -4,13 +4,13 @@
 2. Change into your new directory
 
 ```sh
-make
+cd ...
 ```
 
-4. Build the site and make it available on a local server
+3. Build the site and make it available on a local server
 
 ```sh
 make server
 ```
 
-5. Browse to [http://localhost:4000](http://localhost:4000)
+4. Browse to [http://localhost:4000](http://localhost:4000)
