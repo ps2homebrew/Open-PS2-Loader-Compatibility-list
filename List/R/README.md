@@ -2,6 +2,7 @@
 sort: 18
 ---
 
-# R  
- 
+R
+=
+
 {% include list.liquid all=true %}
