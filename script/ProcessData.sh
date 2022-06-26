@@ -3,7 +3,7 @@ rm -rf *.md
 rm -rf *.JSON
 rm -rf *.MDUMMY
 echo Downloading Report number $1
-wget -q --show-progress "https://api.github.com/repos/israpps/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
+wget -q --show-progress "https://api.github.com/repos/ps2homebrew/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
 dos2unix REPORT.JSON
 echo Processing data...
 jq -r '.body' REPORT.JSON > BODY.MDUMMY
@@ -87,8 +87,7 @@ then
 	echo "$FILETARGET Exists, skipping creation"
 else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
-	echo "# $TITLE">$FILETARGET
-	echo "## __"$ELF"__">>$FILETARGET
+	echo "# $ELF - $TITLE">$FILETARGET
 	echo "">>$FILETARGET
 	echo appending table header liquid macro
 	cat heading.TEMPLATE >> $FILETARGET
