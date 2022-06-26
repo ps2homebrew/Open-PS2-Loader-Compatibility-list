@@ -1,5 +1,4 @@
-# Kingdom Hearts 2 Final mix
-## __SLPM_666.75__
+# SLPM_666.75 - Kingdom Hearts 2 Final mix
 
 {% include table_header %}
 | DVD5 | HDL ISO | OPL 1.0.0 | HDD |  | YES | YES | YES | YES |El_isra| `SCPH-50001` |lexaus attacks cause some lag, but I guess it's not OPL's fault |
