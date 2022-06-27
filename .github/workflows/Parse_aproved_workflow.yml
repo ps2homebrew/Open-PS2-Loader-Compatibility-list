@@ -27,7 +27,6 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "merge report #${{ github.event.issue.number }}"
-          branch: test
           body: "merge report #${{ github.event.issue.number }}"
           title: "merge report #${{ github.event.issue.number }}"
           delete-branch: true
