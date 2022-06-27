@@ -128,8 +128,6 @@ body:
         - label: PADMACRO
         - label: IGR
         - label: GSM
-    validations:
-      required: false
 
   - type: dropdown
     id: compatmode
