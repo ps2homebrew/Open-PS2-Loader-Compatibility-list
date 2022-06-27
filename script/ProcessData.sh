@@ -3,7 +3,7 @@ rm -rf *.md
 rm -rf *.JSON
 rm -rf *.MDUMMY
 echo Downloading Report number "$1"
-wget -q --show-progress "https://api.github.com/repos/AKuHAK/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
+wget -q --show-progress "https://api.github.com/repos/ps2homebrew/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
 dos2unix REPORT.JSON
 echo Processing data...
 jq -r '.body' REPORT.JSON > BODY.MDUMMY
