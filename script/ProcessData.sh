@@ -2,7 +2,7 @@
 rm -rf *.md
 rm -rf *.JSON
 rm -rf *.MDUMMY
-echo Downloading Report number $1
+echo Downloading Report number "$1"
 wget -q --show-progress "https://api.github.com/repos/ps2homebrew/Open-PS2-Loader-Compatibility-list/issues/$1" -O REPORT.JSON
 dos2unix REPORT.JSON
 echo Processing data...
@@ -15,9 +15,9 @@ echo END MDs
 
 for a in *.md
 do
-sed -i '/^###/d' $a
-sed  -i '/^\s*$/d' $a
-sed  -i '/\/n$/d;' $a
+sed -i '/^###/d' "$a"
+sed -i '/^\s*$/d' "$a"
+sed -i '/\/n$/d;' "$a"
 done
 
 declare TESTER=$(jq ".user.login" REPORT.JSON)
@@ -55,22 +55,22 @@ do
 	fi
 done
 echo "--------------------{ SUMMARY }--------------------"
-echo TESTER  		- $TESTER -
-echo TITLE  		- $TITLE -
-echo ELF 			- $ELF -
-echo DEVICE 		- $DEVICE -
-echo FORMAT 		- $FORMAT -
-echo MEDIA 			- $MEDIA -
-echo OPL VERSION	- $OPL -
+echo TESTER  		- "$TESTER" -
+echo TITLE  		- "$TITLE" -
+echo ELF 			- "$ELF" -
+echo DEVICE 		- "$DEVICE" -
+echo FORMAT 		- "$FORMAT" -
+echo MEDIA 			- "$MEDIA" -
+echo OPL VERSION	- "$OPL" -
 echo ---
-echo VMC 			- $VMC -
-echo PADEMU 		- $PADEMU -
-echo PADMACRO 		- $PADMACRO -
-echo IGR 			- $IGR -
-echo GSM 			- $GSM -
+echo VMC 			- "$VMC" -
+echo PADEMU 		- "$PADEMU" -
+echo PADMACRO 		- "$PADMACRO" -
+echo IGR 			- "$IGR" -
+echo GSM 			- "$GSM" -
 echo ---
-echo COMPAT_MODES 	- $COMPAT_MODES -
-echo COMMENTS 		- $COMMENTS -
+echo COMPAT_MODES 	- "$COMPAT_MODES" -
+echo COMMENTS 		- "$COMMENTS" -
 
 if [[ "$TITLE" =~ ^[a-z]|[A-Z].* ]]; then
 FSTCHAR=${TITLE:0:1}
@@ -81,17 +81,16 @@ fi
 echo game goes into folder $FSTCHAR
 
 FILETARGET="../List/$FSTCHAR/$ELF.md"
-echo file path $FILETARGET
-if [ -f $FILETARGET ]
+echo file path "$FILETARGET"
+if [ -f "$FILETARGET" ]
 then
 	echo "$FILETARGET Exists, skipping creation"
 else
 	echo "$FILETARGET doesnt exist, creating new file with game title as heading"
-	echo "# $ELF - $TITLE">$FILETARGET
-	echo "">>$FILETARGET
+	echo "# $ELF - $TITLE">"$FILETARGET"
+	echo "">>"$FILETARGET"
 	echo appending table header liquid macro
-	cat heading.TEMPLATE >> $FILETARGET
+	cat heading.TEMPLATE >> "$FILETARGET"
 fi
 
-echo "| $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>$FILETARGET
-
+echo "| $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>"$FILETARGET"

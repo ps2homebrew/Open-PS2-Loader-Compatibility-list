@@ -1,7 +1,7 @@
 title: Open PS2 Loader
 description: A homebrew Game loader for SCE PlayStation 2
 markdown: GFM
-theme: null
+remote_theme: rundocs/jekyll-rtd-theme
 # debug:
 #   compress: true
 #   dist: false
@@ -14,6 +14,7 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
+  - jekyll-remote-theme
 
 exclude:
   - Makefile

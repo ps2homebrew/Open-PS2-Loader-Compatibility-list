@@ -1,5 +1,5 @@
 name: Game compatibility report
-description: a game compat report that will be merged to the list if it gets approved 
+description: a game compat report that will be merged to the list if it gets approved
 title: "[REPORT]: "
 labels: [report]
 body:
@@ -16,8 +16,8 @@ body:
       label: Checks
       description: "Check before posting"
       options:
-        - label: I have checked if a report of the same game, in the same test environment, is already included  
-        - label: I have tested all features from the feature list 
+        - label: I have checked if a report of the same game, in the same test environment, is already included
+        - label: I have tested all features from the feature list
 
   - type: markdown
     attributes:
@@ -116,9 +116,9 @@ body:
         - CD
     validations:
       required: true
-      
+
   - type: checkboxes
-    id: features 
+    id: features
     attributes:
       label: features
       description: "Wich features did you test?"
@@ -128,8 +128,6 @@ body:
         - label: PADMACRO
         - label: IGR
         - label: GSM
-    validations:
-      required: false
 
   - type: dropdown
     id: compatmode
@@ -150,8 +148,8 @@ body:
   - type: input
     id: comments
     attributes:
-      label: comments about this report 
-      description: Information about game performance 
+      label: comments about this report
+      description: Information about game performance
       placeholder: "ie: audio is corrupted/game crashes when using ..."
     validations:
       required: false
