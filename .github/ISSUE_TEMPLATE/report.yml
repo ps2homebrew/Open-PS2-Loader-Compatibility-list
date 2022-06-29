@@ -17,7 +17,7 @@ body:
       description: "Check before posting"
       options:
         - label: I have checked if a report of the same game, in the same test environment, is already included
-        - label: I have tested all features from the feature list
+        - label: I have tested all features from the feature list before making this report
 
   - type: markdown
     attributes:
@@ -121,11 +121,10 @@ body:
     id: features
     attributes:
       label: features
-      description: "Wich features did you test?"
+      description: "Please Test them all, if you don't mark a feature, the script assumes that it doesnt work..."
       options:
         - label: VMC
         - label: PADEMU
-        - label: PADMACRO
         - label: IGR
         - label: GSM
 
