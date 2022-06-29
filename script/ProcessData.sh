@@ -7,6 +7,7 @@ wget -q --show-progress "https://api.github.com/repos/ps2homebrew/Open-PS2-Loade
 dos2unix REPORT.JSON
 echo Processing data...
 jq -r '.body' REPORT.JSON > BODY.MDUMMY
+dos2unix BODY.MDUMMY
 awk '/^### */{ close(out); out=$2".md" } out!=""{print > out}' BODY.MDUMMY
 
 echo MDs
