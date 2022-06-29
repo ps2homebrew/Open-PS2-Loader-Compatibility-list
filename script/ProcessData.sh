@@ -21,7 +21,7 @@ sed -i '/^\s*$/d' "$a"
 sed -i '/\/n$/d;' "$a"
 done
 
-declare TESTER=$(jq ".user.login" REPORT.JSON)
+declare TESTER=$(jq ".user.login" REPORT.JSON | tr -d '"')
 declare ELF=$(head -n 1 Game.md | tr -d '[:space:]')
 declare PLAYABLE=$(head -n 1 gameplay.md)
 declare TITLE=$(head -n 1 title.md)
@@ -94,4 +94,4 @@ else
 	cat heading.TEMPLATE >> "$FILETARGET"
 fi
 
-echo "| $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | $TESTER | $CONSOLE_MODEL | $COMMENTS ">>"$FILETARGET"
+echo "| $MEDIA | $FORMAT | $OPL | $DEVICE | $COMPAT_MODES | $VMC | $IGR | $PADEMU | $PLAYABLE | @$TESTER | $CONSOLE_MODEL | $COMMENTS ">>"$FILETARGET"
