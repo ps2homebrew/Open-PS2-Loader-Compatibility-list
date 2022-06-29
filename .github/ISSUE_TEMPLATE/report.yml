@@ -124,8 +124,8 @@ body:
       description: "Please Test them all, if you don't mark a feature, the script assumes that it doesnt work..."
       options:
         - label: VMC
-        - label: PADEMU
         - label: IGR
+        - label: PADEMU
         - label: GSM
 
   - type: dropdown
