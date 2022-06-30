@@ -121,7 +121,7 @@ body:
     id: features
     attributes:
       label: features
-      description: "Please Test them all, if you don't mark a feature, the script assumes that it doesnt work..."
+      description: "wich of theese features are working? (Please test them all, unchecked elements are assumed to be broken)"
       options:
         - label: VMC
         - label: IGR
